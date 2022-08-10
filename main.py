@@ -4,7 +4,7 @@ import sys
 
 from PyQt5.QtWidgets import QApplication
 
-from ai.alphabeta_player import AlphaBetaPlayer
+# from ai.alphabeta_player import AlphaBetaPlayer
 from src.game import GameSettings
 from src.index import Connect4
 from src.logger import logger
@@ -19,8 +19,8 @@ if platform.system().lower() == "windows":
     os.environ['QT_PLUGIN_PATH'] = os.path.join(pyqt, "Qt/plugins")
 
 if __name__ == "__main__":
-    player1 = HumanPlayer("Player1")
-    player2 = AlphaBetaPlayer(depth=3)
+    player1 = HumanPlayer("Player 1")
+    player2 = HumanPlayer("Player 2")
     settings = GameSettings()
 
     app = QApplication(sys.argv)
